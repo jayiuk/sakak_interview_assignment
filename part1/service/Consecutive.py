@@ -19,7 +19,7 @@ def find_consecutive(n : int):
 def find_consecutive_groupby(n : str):
     """
     itertools.groupby를 사용한 버전
-    입력된 숫자를 문자열로 변환 -> groupby한 후 반복문
+    입력값을 groupby한 후 반복문
     반복문을 돌면서 그룹끼리 join -> key가 숫자인 경우 최종 반환할 리스트에 추가 -> 리스트 반환
     + 추가된 수정 사항
     key가 숫자 문자 인지 확인 안해도 됨. 어차피 숫자를 입력으로 받기 때문.
