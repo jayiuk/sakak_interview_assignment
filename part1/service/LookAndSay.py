@@ -9,12 +9,12 @@ from service.FormatNumber import format_number
 
 def lookandsay(n : int):
     if n == 1:
-        return n
+        return "1"
     
     store = []
     for i in range(1, n):
         if i == 1:
-            num = i
+            num = "1"
         else:
             num = store[-1]
         

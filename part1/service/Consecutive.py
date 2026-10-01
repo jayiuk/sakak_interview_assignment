@@ -16,7 +16,7 @@ def find_consecutive(n : int):
     result = [m.group() for m in re.finditer(pattern, using)]
     return result
 
-def find_consecutive_groupby(n : int):
+def find_consecutive_groupby(n : str):
     """
     itertools.groupby를 사용한 버전
     입력된 숫자를 문자열로 변환 -> groupby한 후 반복문
@@ -24,11 +24,8 @@ def find_consecutive_groupby(n : int):
     + 추가된 수정 사항
     key가 숫자 문자 인지 확인 안해도 됨. 어차피 숫자를 입력으로 받기 때문.
     """
-    if type(n) != int:
-        return None
-    using = str(n)
     result = []
-    for key, group in groupby(using):
+    for key, group in groupby(n):
         group_string = "".join(group)
         result.append(group_string)
     return result
