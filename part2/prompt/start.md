@@ -39,7 +39,6 @@
 - 사용자가 어떤 항목이 정상인지 판별해야할 때 is_normal_node를 선택해야 합니다.
 - 만약 일상적인 대화라면 아무 노드도 선택하지 말아야 합니다.
 - 여러 노드가 필요하면 순서대로 나열
-- reason은 최대한 짧게 한줄로 작성하세요.
 
 ## 출력 형식
 
@@ -50,8 +49,7 @@
   "execution_plan" : [
     {"node" : "..."},
     {"node" : "..."}
-  ],
-  "reason" : "간단한 판단 근거"
+  ]
 }
 ```
 
@@ -63,10 +61,11 @@
   "intent" : ["MEDICAL"],
   "execution_plan" : [
     {"node" : "overview_node"}
-  ],
-  "reason" : "종합적인 건강검진 결과 설명"
+  ]
 }
 ```
+
+---
 
 ```json
 {
@@ -75,18 +74,16 @@
   "execution_plan" : [
     {"node" : "data_node"},
     {"node" : "is_normal_node"}
-  ],
-  "reason" : "특정 항목이 현재 어떤한지 요구"
+  ]
 }
 ```
+
+---
 
 ```json
 {
   "question" : "집가고싶다",
   "intent" : ["CHAT"],
-  "execution_plan" : [
-
-  ],
-  "reason" : "건강 검진과 관련없는 질문"
+  "execution_plan" : []
 }
 ```
