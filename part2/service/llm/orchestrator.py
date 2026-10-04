@@ -1,9 +1,9 @@
 from langgraph.graph.message import add_messages
-from service.llm.StartNode import start_node
-from service.llm.chat import Chat
-from service.llm.Mapping import MappingNode
-from service.llm.total_explain import TotalExplain
-from service.llm.is_normal import IsNormal
+from llm.StartNode import start_node
+from llm.chat import Chat
+from llm.Mapping import MappingNode
+from llm.total_explain import TotalExplain
+from llm.is_normal import IsNormal
 
 from langgraph.graph import StateGraph, START, END
 from typing import TypedDict, Any, Dict, List
@@ -114,5 +114,9 @@ class AIGraph:
         }
         
         final_state = await self.graph.ainvoke(initial_state)
+        results = final_state["results"]
         
-        return final_state["results"]
+        final_result = results[-1]["result"]["answer"]
+        
+        print(f"최종 응답 : {final_result}")
+        return final_result

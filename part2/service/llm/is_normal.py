@@ -1,9 +1,9 @@
-from service.context.get_context import get_prompt
-from service.preprocessing.parsing_result import parsing_json_response
+from context.get_context import get_prompt
+from preprocessing.parsing_result import parsing_json_response
 import os
 from dotenv import load_dotenv
 import json
-from service.preprocessing.DataPreprocessing import get_specific_normal_a,get_specific_normal_b, get_specific_result, get_specific_suspected
+from preprocessing.DataPreprocessing import get_specific_normal_a,get_specific_normal_b, get_specific_result, get_specific_suspected
 from typing import List, Dict, Any
 import requests
 

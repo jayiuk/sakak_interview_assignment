@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
-from service.context.get_context import get_prompt
-from service.preprocessing.parsing_result import parsing_json_response
+from context.get_context import get_prompt
+from preprocessing.parsing_result import parsing_json_response
 
 
 load_dotenv()
