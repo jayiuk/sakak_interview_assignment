@@ -33,3 +33,4 @@ os : ubuntu
 
 ## 주의사항
 - 실행 전 무조건 requirements.txt 설치 필수(part1, part2 모두)
+- .env로 BASE_URL, MODEL, PROMPT_PATH, BASE_MOCK_API 설정 필요
