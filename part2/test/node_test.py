@@ -4,6 +4,7 @@ from service.llm.Mapping import MappingNode
 from service.llm.GetLLM import LLMInstance
 from service.llm.total_explain import TotalExplain
 from service.llm.is_normal import IsNormal
+from service.llm.chat import Chat
 import os
 from dotenv import load_dotenv
 
@@ -58,4 +59,11 @@ async def test_is_normal():
   llm = LLMInstance(BASE, MODEL)
   node = IsNormal(llm)
   result = await node.generate(mapping_expected, query = "지금 간수치 정상이야?")
+  print(result)
+  
+@pytest.mark.asyncio
+async def test_chat():
+  llm = LLMInstance(BASE, MODEL)
+  node = Chat(llm)
+  result = await node.generate(query = "넌 뭘 할수있어?")
   print(result)
