@@ -5,6 +5,8 @@ os : ubuntu
 사용한 서빙 도구 : ollama
 사용한 모델 : mistral:7b
 
+의존성 설치 : requirements.txt
+
 ## 주식회사 사각 과제테스트
 
 ### part1
