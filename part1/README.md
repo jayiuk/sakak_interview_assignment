@@ -59,12 +59,6 @@ lookandsay(find_consecutive_groupby + format_number) -> get_lookandsay_middle_nu
 - get_lookandsay_middle_nums로 합친 이유 : 입력이 범위를 벗어났을 때 ValueError를 일으키기 위해서
 - 마지막 main.py에서 try문으로 최종 에러처리
 
-## 실행 방법
-- part1 디렉토리로 이동
-- main.py 실행
-- 터미널 창에 항 입력 요청 나온 부분에 항 입력
-- 결과 확인
-
 ## 소감
 ### 아쉬운 점
 - 개미수열을 처음 접해봐서 integer 자릿수를 벗어난 숫자가 나올것이라고 예상하지 못함
