@@ -1,6 +1,6 @@
 set -euo pipefail
 
-export OLLAMA_HOST="0.0.0.0:11434"
+export OLLAMA_HOST="0.0.0.0:7777"
 
 export OLLAMA_CONTEXT_LENGTH=8192
 

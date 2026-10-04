@@ -1,7 +1,6 @@
-from langchain_ollama import ChatOllama
 import os
 from dotenv import load_dotenv
-from context.get_context import get_prompt
+from service.context.get_context import get_prompt
 from service.preprocessing.parsing_result import parsing_json_response
 
 
@@ -23,5 +22,6 @@ class start_node:
         ]
         response = await self.llm.chat(messages)
         response_json = response.content
+        print(response_json)
         result = parsing_json_response(response_json)
         return result

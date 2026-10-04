@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from config.Config import MockAPIResponse
+import uvicorn
 
 router = FastAPI()
 
@@ -136,3 +137,6 @@ async def get_data(patientId):
     ]
   }
 }
+    
+if __name__ == "__main__":
+  uvicorn.run(router, host = "0.0.0.0", port = 11432)

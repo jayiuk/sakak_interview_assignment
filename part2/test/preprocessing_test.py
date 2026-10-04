@@ -1,6 +1,6 @@
 import pytest
 
-from service.preprocessing.DataPreprocessing import only_overview, get_data_part, only_unit, only_normal_A, only_normal_B, only_suspected, only_result_list, get_name
+from service.preprocessing.DataPreprocessing import only_overview, get_data_part, only_unit, only_normal_A, only_normal_B, only_suspected, only_result_list, get_name, get_specific_result
 
 expected_overview = {
         "checkupDate": "2025-08-15",
@@ -388,6 +388,13 @@ result_part = {
         "questionnaire": []
       }
 
+mapping_input = ["AST", "ALT", "yGPT"]
+mapping_expected = {
+  "AST" : 30,
+  "ALT" : 28,
+  "yGPT" : 25
+}
+
 patient_name = "홍길동"
 
 @pytest.mark.parametrize("before, after", [(original, expected_data)])
@@ -417,3 +424,6 @@ def test_get_result_list():
 
 def test_get_name():
     assert get_name(original) == patient_name
+    
+def test_get_specific_result():
+  assert get_specific_result(original, mapping_input) == mapping_expected
