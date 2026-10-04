@@ -30,3 +30,6 @@ os : ubuntu
 - service 디렉토리로 이동
 - start_server.sh 실행
 - 현재 확인은 postman이나 http://localhost:11432/docs에 접속하여 확인해야함
+
+## 주의사항
+- 실행 전 무조건 requirements.txt 설치 필수(part1, part2 모두)
