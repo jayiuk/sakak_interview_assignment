@@ -42,6 +42,36 @@ def get_specific_result(before : Dict[str, Any], specific_list = List[str]):
     overview = only_overview(before)
     result= {}
     for s in specific_list:
-        specific_result = int(overview.get(s))
+        specific_result = overview.get(s)
         result[s] = specific_result
     return result
+
+def get_specific_normal_a(before : Dict[str, Any], specific_list = List[str]):
+    normal_a = only_normal_A(before)
+    result = {"refType" : "정상"}
+    
+    for s in specific_list:
+        specific_normal_a = normal_a.get(s)
+        result[s] = specific_normal_a
+    return result
+
+def get_specific_normal_b(before : Dict[str, Any], specific_list = List[str]):
+    normal_a = only_normal_B(before)
+    result = {"refType" : "다소의심"}
+    
+    for s in specific_list:
+        specific_normal_a = normal_a.get(s)
+        result[s] = specific_normal_a
+    return result
+
+def get_specific_suspected(before : Dict[str, Any], specific_list = List[str]):
+    normal_a = only_suspected(before)
+    result = {"refType" : "질환의심"}
+    
+    for s in specific_list:
+        specific_normal_a = normal_a.get(s)
+        result[s] = specific_normal_a
+    return result
+
+
+    

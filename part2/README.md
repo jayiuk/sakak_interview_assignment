@@ -13,3 +13,7 @@
 - is_normal_node : 건강검진 데이터(전체 혹은 특정항목)가 정상인지 비정상인지 판별
 - specific_explain_node : 특정 항목의
 - answer_node : 마무리 결과 생성
+
+## AI 사용 내역
+- 프롬프트 초안 작성
+- 에러 원인 탐색

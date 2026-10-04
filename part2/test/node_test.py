@@ -3,6 +3,7 @@ from service.llm.StartNode import start_node
 from service.llm.Mapping import MappingNode
 from service.llm.GetLLM import LLMInstance
 from service.llm.total_explain import TotalExplain
+from service.llm.is_normal import IsNormal
 import os
 from dotenv import load_dotenv
 
@@ -50,3 +51,11 @@ async def test_total_explain():
     node = TotalExplain(llm)
     result = await node.generate(te_query)
     print(result)
+    
+
+@pytest.mark.asyncio
+async def test_is_normal():
+  llm = LLMInstance(BASE, MODEL)
+  node = IsNormal(llm)
+  result = await node.generate(mapping_expected, query = "지금 간수치 정상이야?")
+  print(result)

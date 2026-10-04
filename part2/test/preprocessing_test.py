@@ -390,9 +390,9 @@ result_part = {
 
 mapping_input = ["AST", "ALT", "yGPT"]
 mapping_expected = {
-  "AST" : 30,
-  "ALT" : 28,
-  "yGPT" : 25
+  "AST" : "30",
+  "ALT" : "28",
+  "yGPT" : "25"
 }
 
 patient_name = "홍길동"
