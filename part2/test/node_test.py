@@ -19,7 +19,7 @@ expected = {
   "question" : f"{query}",
   "intent" : ["MEDICAL"],
   "execution_plan" : [
-    {"node" : "data_node"},
+    {"node" : "mapping_node"},
     {"node" : "is_normal_node"}
   ],
 }
